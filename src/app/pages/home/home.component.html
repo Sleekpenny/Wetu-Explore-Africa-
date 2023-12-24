@@ -1,0 +1,42 @@
+
+<app-navbar></app-navbar>
+<app-header></app-header>
+
+<div [@notificationAmine]>
+    <div class="w-full relative md:overflow-hidden p-2 md:h-screen h-full flex justify-center"  >
+        <video autoplay loop class="absolute p-2 md:p-0" [ngStyle]="videoStyling">
+            <source src="/assets/-6aa2-491c-8230-bbd294b36dab.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <div class=" fixed bottom-28 md:bottom-0 md:right-5 right-0 p-5 ">
+        <img src="/assets/Group 5.png" alt="waveing_Hands"  class=" w-10 h-10 md:w-16 md:h-16 cursor-pointer" >
+    </div>  
+    </div>
+
+
+    <div class="flex justify-between flex-col md:flex-row p-6 mt-52 md:mt-0">
+         <div class=" md:w-2/5">
+            <div>
+                <p class="font-bold md:text-2xl text-xl text-white mt-2">Find indigenous locations around Africa and stories about them from real people.</p>
+                <p class="text-xs md:text-sm text-neutral-400 text-justify mt-2">Discover the Hidden Gems of Africa: Uncover Indigenous Locations and Captivating Tales from Adventurous Travelers. Embark on a remarkable journey through Africa's rich cultural tapestry, as real tourists share their awe-inspiring experiences at indigenous destinations. Delve into the untold stories of ancient tribes, vibrant communities, and breathtaking landscapes that have stood the test of time. </p>    
+            </div>
+
+            <div class="md:block hidden">
+                <app-new-location></app-new-location>
+            </div>                
+            </div>
+
+        <div class="md:mx-auto md:grid md:place-content-center md:gap-4 md:grid-cols-3 mt-4 flex overflow-x-scroll w-80 md:w-auto hidescroll" >
+            <div *ngFor="let post of retrivePost">
+                <app-travel-loc [postData] = post></app-travel-loc>   
+            </div>
+               
+        </div>
+
+        <div class="md:hidden block mt-8">
+            <app-new-location></app-new-location>
+        </div>        
+    
+
+</div>

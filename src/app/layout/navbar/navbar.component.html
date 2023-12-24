@@ -1,0 +1,35 @@
+<section class="p-6">
+    <div class="justify-between items-center flex">
+        <div class="logo md:text-xl text-lg font-extrabold text-white">Wetu.</div>
+
+        <div class="" >
+        
+            <ul class="md:flex md:p-0 md:bg-inherit md:text-white md:gap-4 md:flex-row md:text-sm md:static hidden font-semibold" >
+                <li class="cursor-pointer">Location</li>
+                <li class="cursor-pointer">Stories</li>
+                <li class="cursor-pointer">Food</li>
+                <li class="cursor-pointer">Tell us your story</li>
+            </ul>
+            
+            <button class="cursor-pointer md:hidden text-sm font-semibold text-right w-full text-white" (click) = toggleMeun()  >Menu</button>                         
+
+            <ul class="md:hidden font-extrabold flex-col text-left text-xl p-4 border fixed w-full h-full left-0 top-0  bg-white text-black z-10" *ngIf="showMenu" [@notificationAmine]>
+
+            <button class="cursor-pointer md:hidden text-sm font-semibold text-right w-full " (click) = toggleMeun() >Close</button> 
+
+                <li class="cursor-pointer p-2">Location</li>
+                <li class="cursor-pointer p-2">Stories</li>
+                <li class="cursor-pointer p-2">Food</li>
+                <li class="cursor-pointer p-2">Tell us your story</li>
+
+                <div class="flex gap-4 p-2 mt-4" >
+                    <img src="/assets/instagram-logo-facebook-2-svgrepo-com 1.png" alt="instagram" width="20" >
+                    <img src="/assets/Vector.png" alt="instagram" width="20">
+                    <img src="/assets/dribble-svgrepo-com 1.png" alt="instagram" width="20">
+                    <img src="/assets/github-circle-svgrepo-com 1.png" alt="instagram" width="20">
+                </div>
+               
+            </ul>
+        </div>
+    </div>
+</section>

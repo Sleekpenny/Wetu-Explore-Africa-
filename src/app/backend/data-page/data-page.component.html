@@ -1,0 +1,28 @@
+<div class="flex justify-between text-neutral-400 flex-col md:flex-row">
+
+<div class=" p-6 w-2/5">
+
+<form #form="ngForm" (submit)="onSubmit(form)" >
+   <input type="text" class="rounded w-full p-2 text-black outline-none m-4" placeholder="location" ngModel name="location" required>
+   <input type="text" class="rounded w-full p-2 text-black outline-none m-4" placeholder="category" ngModel name="category" required>
+   <input type="file" class="rounded w-full p-2 text-black outline-none m-4" (change) = uploadImg($event) ngModel name="image" required>
+   <textarea cols="30" rows="10" placeholder="content" class="rounded w-full p-2 outline-none m-4 text-black" ngModel name="content" required></textarea>
+   <button class="bg-green-600 rounded p-2 m-4 text-white" [disabled]="form.invalid"> Submit </button>
+</form>
+ 
+</div>
+
+    <div class="w-72 h-96 bg-white rounded p-2 m-4 mx-auto">
+    <img [src]="imgSrc" alt="" class="h-80 p-4 overflow-hidden" >
+   </div>
+
+<div class=" p-6">
+
+    <p class="font-bold">List of category to choose from when filling this form. <br> just copy any category from here to avoid any mistake</p>
+    <p>1. Animal</p>
+    <p>2. Nature</p>
+    <p>3. wildlife</p>
+    <p>4. endanaged</p>
+
+</div>
+

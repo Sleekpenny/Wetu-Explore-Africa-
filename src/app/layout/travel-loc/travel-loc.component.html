@@ -1,0 +1,5 @@
+<div class="m-2 md:w-72 w-48 overflow-hidden cursor-pointer" [routerLink]='["/cities", postData.id ]' *ngIf="postData">
+    <img src="{{postData.data.image}}" alt="{{postData.data.category}}" class="w-full h-52 md:h-auto object-fill">
+    <p class="text-white text-sm md:text-base mt-2 font-extrabold">{{postData.data.location}}</p>
+    <p class="text-neutral-400 text-xs md:text-sm mt-2 h-24 overflow-hidden">{{postData.data.content}}</p>
+</div>

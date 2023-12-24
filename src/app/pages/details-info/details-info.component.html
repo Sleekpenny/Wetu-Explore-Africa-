@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+
+<div class="w-full flex justify-between flex-col md:flex-row p-6">
+    <div class="md:w-2/5"  [@notificationAmine1]>
+        
+            <div class="md:text-4xl text-xl font-extrabold text-white">
+                <p>About {{postDetails.location}} </p>                
+                <p class="text-xs md:text-sm text-neutral-400 mt-6 text-justify" >{{postDetails.content}}</p>
+            </div>
+            
+
+            <div class="grid md:grid-cols-2 grid-cols-1 md:gap-4 ">
+
+                <div class="rounded border border-neutral-400 p-2 mt-4">
+                    <div class="flex gap-4 items-center">
+                        <img src="/assets/Group 6.png" width="45">
+                        <figcaption class="text-neutral-400 text-xs md:text-sm">Stories about this place</figcaption>
+                    </div>
+                </div>
+
+                <div class="rounded border border-neutral-400 p-2 mt-4">
+                    <div class="flex gap-4 items-center">
+                        <img src="/assets/Group 6 (1).png" width="45">
+                        <figcaption class="text-neutral-400 text-xs md:text-sm">Cuisines</figcaption>
+                    </div>
+                </div>
+
+                <div class="rounded border border-neutral-400 p-2 mt-4">
+                    <div class="flex gap-4 items-center">
+                        <img src="/assets/Group 7.png" width="45">
+                        <figcaption class="text-neutral-400 text-xs md:text-sm">Local guides</figcaption>
+                    </div>
+                </div>
+
+                <div class="rounded border border-neutral-400 p-2 mt-4">
+                    <div class="flex gap-4 items-center">
+                        <img src="/assets/Group 8.png" width="45">
+                        <figcaption class="text-neutral-400 text-xs md:text-sm">Local news</figcaption>
+                    </div>
+                </div>
+            </div>
+    
+    </div>
+
+     
+    <div class="mx-auto w-2/4">          
+        <p class="md:text-2xl text-sm font-extrabold text-white text-center mt-4 md:mt-0">Side attraction</p>        
+        <div class="flex md:justify-end justify-center items-center flex-wrap gap-4 mt-2" >
+            <div *ngFor="let postDetails of retrivePost">                
+            <app-travel-loc [postData] = 'postDetails'></app-travel-loc>
+            </div>
+   
+        </div>         
+    </div>
+</div>
+
+    <div class="md:text-base text-sm font-bold text-white p-6 flex items-center cursor-pointer" routerLink="/">
+        <p>Go back</p>
+        <div class="ml-2">
+            <img src="/assets/Vector 1 (2).png" alt="">
+        </div>  
+    </div>
+
